@@ -40,23 +40,5 @@ what is this
       
     </item>
     
-    
-
-    <item>
-      <title>Hello World</title>
-      <link>http://localhost:1313/post/hello/</link>
-      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <author>2208794899@qq.com (HinanawiTeriko)</author>
-      <guid>http://localhost:1313/post/hello/</guid>
-      <description>
-        <![CDATA[<h1>Hello World</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
-        
-          <p>💘 博麗 霊夢 💘</p>
-        
-        <hr><p>本文2023-03-15首发于<a href='http://localhost:1313/'>HinanawiTeriko's Blog</a>，最后修改于2023-03-15</p>]]>
-      </description>
-      
-    </item>
-    
   </channel>
 </rss>
