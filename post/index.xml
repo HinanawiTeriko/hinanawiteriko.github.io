@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Project</title>
+    <title>HinanawiTeriko&#39;s Blog</title>
     <link>http://localhost:1313/post/</link>
-    <description>Recent content from My New Hugo Project</description>
+    <description>Recent content from HinanawiTeriko&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     
-    <managingEditor>xxx@example.com (D-Sketon)</managingEditor>
-    <webMaster>xxx@example.com (D-Sketon)</webMaster>
+    <managingEditor>2208794899@qq.com (HinanawiTeriko)</managingEditor>
+    <webMaster>2208794899@qq.com (HinanawiTeriko)</webMaster>
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
@@ -25,17 +25,17 @@
       <title>Test</title>
       <link>http://localhost:1313/post/test/</link>
       <pubDate>Fri, 20 Feb 2026 23:36:47 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>2208794899@qq.com (HinanawiTeriko)</author>
       <guid>http://localhost:1313/post/test/</guid>
       <description>
-        <![CDATA[<h1>Test</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        <![CDATA[<h1>Test</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
         
           <h1 id="what-is-this">
 <a class="header-anchor" href="#what-is-this"></a>
 what is this
 </h1>
         
-        <hr><p>本文2026-02-20首发于<a href='http://localhost:1313/'>My New Hugo Project</a>，最后修改于2026-02-20</p>]]>
+        <hr><p>本文2026-02-20首发于<a href='http://localhost:1313/'>HinanawiTeriko's Blog</a>，最后修改于2026-02-20</p>]]>
       </description>
       
     </item>
@@ -46,14 +46,14 @@ what is this
       <title>Hello World</title>
       <link>http://localhost:1313/post/hello/</link>
       <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>2208794899@qq.com (HinanawiTeriko)</author>
       <guid>http://localhost:1313/post/hello/</guid>
       <description>
-        <![CDATA[<h1>Hello World</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        <![CDATA[<h1>Hello World</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
         
           <p>💘 博麗 霊夢 💘</p>
         
-        <hr><p>本文2023-03-15首发于<a href='http://localhost:1313/'>My New Hugo Project</a>，最后修改于2023-03-15</p>]]>
+        <hr><p>本文2023-03-15首发于<a href='http://localhost:1313/'>HinanawiTeriko's Blog</a>，最后修改于2023-03-15</p>]]>
       </description>
       
     </item>
