@@ -22,15 +22,18 @@
     
 
     <item>
-      <title>Hello World</title>
-      <link>http://localhost:1313/post/show_tenshi/</link>
+      <title>关于为什么 $\sqrt{2}$ 是无理数</title>
+      <link>http://localhost:1313/post/prove_math1/</link>
       <pubDate>Sat, 21 Feb 2026 22:26:47 &#43;0800</pubDate>
       <author>2208794899@qq.com (HinanawiTeriko)</author>
-      <guid>http://localhost:1313/post/show_tenshi/</guid>
+      <guid>http://localhost:1313/post/prove_math1/</guid>
       <description>
-        <![CDATA[<h1>Hello World</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
+        <![CDATA[<h1>关于为什么 $\sqrt{2}$ 是无理数</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
         
-          <p>没什么，就是展示一下天子封面</p>
+          <h2 id="前期提要">
+<a class="header-anchor" href="#%e5%89%8d%e6%9c%9f%e6%8f%90%e8%a6%81"></a>
+前期提要
+</h2><p>笔者今日在耍手机途中恰巧看到曼士沉思录的视频, 其中提到一个证明&amp;\sqrt{2}&amp;是无理数的过程, 突然意识到好像从来没有思考过为什么$\sqrt{2}$是无理数, 故记录.</p>
         
         <hr><p>本文2026-02-21首发于<a href='http://localhost:1313/'>HinanawiTeriko's Blog</a>，最后修改于2026-02-21</p>]]>
       </description>
