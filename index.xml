@@ -12,12 +12,43 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Sun, 22 Feb 2026 21:50:47 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 23:50:47 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>[更新ing] 深度学习神经网络设计基础 2.卷积的理解</title>
+      <link>http://localhost:1313/post/net/net2/</link>
+      <pubDate>Fri, 27 Feb 2026 23:50:47 &#43;0800</pubDate>
+      <author>2208794899@qq.com (HinanawiTeriko)</author>
+      <guid>http://localhost:1313/post/net/net2/</guid>
+      <description>
+        <![CDATA[<h1>[更新ing] 深度学习神经网络设计基础 2.卷积的理解</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
+        
+          <h1 id="正文">
+<a class="header-anchor" href="#%e6%ad%a3%e6%96%87"></a>
+正文
+</h1><blockquote>
+<p>本文主要介绍笔者对卷积在数学上的理解以及在神经网络中的初步应用</p>
+</blockquote>
+<h2 id="1-卷积的数学定义">
+<a class="header-anchor" href="#1-%e5%8d%b7%e7%a7%af%e7%9a%84%e6%95%b0%e5%ad%a6%e5%ae%9a%e4%b9%89"></a>
+1. 卷积的数学定义
+</h2><p>在数学上, 我们定义 $\mathbf{f(x)对g(x)的卷积为f⋆g, 其定义式为}$<br>
+<strong>连续形式</strong>
+</p>
+        
+        <hr><p>本文2026-02-27首发于<a href='http://localhost:1313/'>HinanawiTeriko's Blog</a>，最后修改于2026-02-27</p>]]>
+      </description>
+      
+        <category>深度学习</category>
+      
+    </item>
     
     
 

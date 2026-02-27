@@ -8,7 +8,7 @@
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 /><title>
-  关于为什么 $\sqrt{2}$ 是无理数 | HinanawiTeriko
+  [更新ing] 深度学习神经网络设计基础 2.卷积的理解 | HinanawiTeriko
 </title>
 <meta name="description" content="少女祈祷中..."/><script>
   window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_4k4bc36ef96\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
@@ -33,12 +33,12 @@
     type="font/woff2"
     crossorigin="anonymous"
   /><link rel="stylesheet" href="/css/loader.css" /><meta property="og:type" content="website" />
-  <meta property="og:title" content="关于为什么 $\sqrt{2}$ 是无理数 | HinanawiTeriko" />
+  <meta property="og:title" content="[更新ing] 深度学习神经网络设计基础 2.卷积的理解 | HinanawiTeriko" />
   <meta
     property="og:description"
     content="少女祈祷中..."
   />
-  <meta property="og:url" content="http://localhost:1313/post/prove_math1/" />
+  <meta property="og:url" content="http://localhost:1313/post/net/net2/" />
   <meta
     property="og:site_name"
     content="HinanawiTeriko&#39;s Blog"
@@ -48,8 +48,8 @@
     content="/"
   />
   <meta property="article:author" content="HinanawiTeriko" />
-  <meta property="article:published_time" content="2026-02-22T15:00:47&#43;08:00" />
-  <meta property="article:modified_time" content="2026-02-22T15:00:47&#43;08:00" /><meta name="twitter:card" content="summary" />
+  <meta property="article:published_time" content="2026-02-27T23:50:47&#43;08:00" />
+  <meta property="article:modified_time" content="2026-02-27T23:50:47&#43;08:00" /><meta name="twitter:card" content="summary" />
   <meta name="twitter:image" content="/" />
 <link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
     rel="preload"
@@ -121,9 +121,9 @@
       </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
-<header id="header" aria-label="Site header"><picture></picture><img crossorigin="anonymous" fetchpriority="high" src="/images/tenshi/tenshi_cool1_1920x1080.jpg" alt="关于为什么 $\sqrt{2}$ 是无理数"><div id="header-outer">
+<header id="header" aria-label="Site header"><picture></picture><img crossorigin="anonymous" fetchpriority="high" src="/images/tenshi/tenshi_cool1_1920x1080.jpg" alt="[更新ing] 深度学习神经网络设计基础 2.卷积的理解"><div id="header-outer">
     <div id="header-title"><span id="logo">
-            <h1 data-aos="slide-up">关于为什么 $\sqrt{2}$ 是无理数</h1>
+            <h1 data-aos="slide-up">[更新ing] 深度学习神经网络设计基础 2.卷积的理解</h1>
           </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
   </div>
 </header><div id="content"
@@ -137,8 +137,13 @@
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#前期提要">前期提要</a></li>
-    <li><a href="#证明过程">证明过程</a></li>
+    <li><a href="#1-卷积的数学定义">1. 卷积的数学定义</a></li>
+    <li><a href="#2卷积在卷积神经网络cnn中的应用">2.卷积在卷积神经网络(CNN)中的应用</a>
+      <ul>
+        <li><a href="#21-卷积核">2.1. 卷积核</a></li>
+        <li><a href="#22-各种算子图像处理">2.2. 各种算子(图像处理)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div></div>
@@ -210,40 +215,123 @@
     class="article-date-link icon-calendar"
     data-aos="zoom-in"
   >
-    <time datetime="2026-02-22 15:00:47 &#43;0800 CST" itemprop="datePublished"
-      >2026-02-22</time
+    <time datetime="2026-02-27 23:50:47 &#43;0800 CST" itemprop="datePublished"
+      >2026-02-27</time
     >
     <time style="display: none;" id="post-update-time"
-      >2026-02-22</time
+      >2026-02-27</time
     >
   </span></div>
-</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h2 id="前期提要">
-<a class="header-anchor" href="#%e5%89%8d%e6%9c%9f%e6%8f%90%e8%a6%81"></a>
-前期提要
-</h2><p>笔者今日在耍手机途中恰巧看到曼士沉思录的视频, 其中提到一个证明&amp;\sqrt{2}&amp;是无理数的过程, 突然意识到好像从来没有思考过为什么$\sqrt{2}$是无理数, 故记录.</p>
-<h2 id="证明过程">
-<a class="header-anchor" href="#%e8%af%81%e6%98%8e%e8%bf%87%e7%a8%8b"></a>
-证明过程
-</h2><ul>
-<li>已知: 无理数是无法写为整数分式形式的数, 即我们需要证明$\sqrt{2}$无法由整数分式形式表示</li>
+</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="正文">
+<a class="header-anchor" href="#%e6%ad%a3%e6%96%87"></a>
+正文
+</h1><blockquote>
+<p>本文主要介绍笔者对卷积在数学上的理解以及在神经网络中的初步应用</p>
+</blockquote>
+<h2 id="1-卷积的数学定义">
+<a class="header-anchor" href="#1-%e5%8d%b7%e7%a7%af%e7%9a%84%e6%95%b0%e5%ad%a6%e5%ae%9a%e4%b9%89"></a>
+1. 卷积的数学定义
+</h2><p>在数学上, 我们定义 $\mathbf{f(x)对g(x)的卷积为f⋆g, 其定义式为}$<br>
+<strong>连续形式</strong>
+</p>
+$$\mathbf{(f⋆g)(x) = \int_{-\infty}^{\infty} f(\tau)g(x - \tau) \,d\tau} $$<p>
+<strong>离散形式</strong>
+</p>
+$$\mathbf{(x⋆y)[n] = \sum_{m=-{\infty}}^{\infty} x[m]g[n-m]} $$<p>
+<strong>二维离散形式(深度学习中常用)</strong>
+</p>
+$$\mathbf{(X⋆K)[i, j] = \sum_{a=-\infty}^{\infty}\sum_{b=-\infty}^{\infty}K[a, b]X[i-a, j-b]}\qquad 其中K为卷积核$$<blockquote>
+<p>可以看到, 在数学上的卷积操作一般覆盖整个原函数(即${f(x)}$), 但显然深度学习中负担不起如此高的计算成本. 即使只是有限地对输入图像的每个像素的每个通道进行计算,其计算量也不是轻易可以承担的(一张1080*720的图像若使用全连接层,可达$10^{10}$数量级的计算量),那么我们如何在保证训练质量的前提下减少计算量呢?</p>
+</blockquote>
+<h2 id="2卷积在卷积神经网络cnn中的应用">
+<a class="header-anchor" href="#2%e5%8d%b7%e7%a7%af%e5%9c%a8%e5%8d%b7%e7%a7%af%e7%a5%9e%e7%bb%8f%e7%bd%91%e7%bb%9ccnn%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8"></a>
+2.卷积在卷积神经网络(CNN)中的应用
+</h2><p>在前面我们设计多层感知机时,所用的神经网络层都属于 <strong>全连接层</strong>,即输出向量中的每一个值都需要经过输入向量的所有值*对应权重来得到(此处省略偏置).当输入为一维向量且特征较少时, 这种设计既简单又简单, 权重仅为小矩阵,计算量偏少.但当输入变为图片等大矩阵时,由于要为所有输出层的元素配置一组权重, 权重的维度来到四维, 计算量爆炸.为了解决这个问题, <strong>卷积核</strong> 出现了, 于是卷积神经网络应运而生.</p>
+<h3 id="21-卷积核">
+<a class="header-anchor" href="#21-%e5%8d%b7%e7%a7%af%e6%a0%b8"></a>
+2.1. 卷积核
+</h3><p>当我们使用多层感知机来解决输入二维向量,设输入为 <strong>X</strong>, 权重为 <strong>W</strong>,则输出 <strong>H</strong> 为
+</p>
+$$\mathbf{H[i,j] = \sum_{k}\sum_{l}W_{i, j, k, l}X[k, l]}\qquad(1)$$<p>
+</p>
+$$也可表示为\, \mathbf{H[i,j] = \sum_{a}\sum_{b}W_{i, j, a, b}X[i-a, j-b]}\qquad(2)$$<p>可以看到,在(2)式中,我们使用 <strong>i-a</strong>, <strong>j-b</strong> 来代替k和l, 此时 <strong>H[i, j]</strong> 从在 <strong>X</strong> 上绝对坐标的计算转为对在 <strong>X[i, j]</strong> 附近a, b距离内的相对坐标计算, 其中$\mathbf{a \in [i-k, 0], b \in [j-l, 0]}$, 也就是H[i,j]仍受整个X影响,只是公式表现方式不一样, 这其实运用了卷积的 <strong>平移不变性</strong></p>
+<p>这时候我们想到,如果压缩a和b的取值范围,让H[i,j]的取值只受X[i,j]周围的一小部分范围影响,这样即大幅度减少了计算量,也让结果更加合理(很明显,图片左上角的像素点对右下角的像素点应该是什么的预测的贡献不大), 这就是 <strong>卷积核</strong>, 这也是卷积的 <strong>局部性</strong>
+</p>
+$$\mathbf{a, b \in [-\delta, \delta], \delta 为一个较小的正整数}$$<p>此时的 <strong>H[i,j]</strong> 如下
+</p>
+$$\mathbf{H[i,j] = \sum_{a=-\delta}^{\delta}\sum_{b=-\delta}^{\delta}W_{a,b}X_{i-a,i-b}}$$<h3 id="22-各种算子图像处理">
+<a class="header-anchor" href="#22-%e5%90%84%e7%a7%8d%e7%ae%97%e5%ad%90%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86"></a>
+2.2. 各种算子(图像处理)
+</h3><blockquote>
+<p>这里简单列举一些图像处理中常用的算子的常用卷积核(即上文中的 <strong>W</strong>)</p>
+</blockquote>
+<h4 id="221-高斯算子图像模糊处理降低噪声">
+<a class="header-anchor" href="#221-%e9%ab%98%e6%96%af%e7%ae%97%e5%ad%90%e5%9b%be%e5%83%8f%e6%a8%a1%e7%b3%8a%e5%a4%84%e7%90%86%e9%99%8d%e4%bd%8e%e5%99%aa%e5%a3%b0"></a>
+2.2.1. 高斯算子(图像模糊处理,降低噪声)
+</h4>$$
+\mathbf{\frac{1}{16} * \begin{bmatrix}
+                          1 & 2 & 1 \\
+                          2 & 4 & 2 \\
+                          1 & 2 & 1 \\
+                       \end{bmatrix}}
+$$<h4 id="222-sobel算子简单的检测边缘">
+<a class="header-anchor" href="#222-sobel%e7%ae%97%e5%ad%90%e7%ae%80%e5%8d%95%e7%9a%84%e6%a3%80%e6%b5%8b%e8%be%b9%e7%bc%98"></a>
+2.2.2. sobel算子(简单的检测边缘)
+</h4><p><strong>竖直检测</strong>
+</p>
+$$
+\mathbf{\frac{1}{16} * \begin{bmatrix}
+                        -1 & -2 & -1 \\
+                         0 &  0 &  0 \\
+                        -1 & -2 & -1 \\
+                       \end{bmatrix}}
+$$<p>
+<strong>水平检测</strong>
+</p>
+$$
+\mathbf{\begin{bmatrix}
+        -1 & 0 & -1 \\
+        -2 & 0 & -2 \\
+        -1 & 0 & -1 \\
+        \end{bmatrix}}
+$$<h4 id="223-拉普拉斯算子较复杂的边缘斑点检测">
+<a class="header-anchor" href="#223-%e6%8b%89%e6%99%ae%e6%8b%89%e6%96%af%e7%ae%97%e5%ad%90%e8%be%83%e5%a4%8d%e6%9d%82%e7%9a%84%e8%be%b9%e7%bc%98%e6%96%91%e7%82%b9%e6%a3%80%e6%b5%8b"></a>
+2.2.3. 拉普拉斯算子(较复杂的边缘/斑点检测)
+</h4><p><strong>变体1</strong>
+</p>
+$$
+\mathbf{\begin{bmatrix}
+         0 & -1 &  0 \\
+        -1 &  4 & -1 \\
+         0 & -1 &  0 \\
+        \end{bmatrix}}
+$$<p>
+<strong>变体2</strong>
+</p>
+$$
+\mathbf{\begin{bmatrix}
+        -1 & -1 & -1 \\
+        -1 &  8 & -1 \\
+        -1 & -1 & -1 \\
+        \end{bmatrix}}
+$$<blockquote>
+<p>在训练模型时,计算机很可能会在浅层网络中学习出类似上述算子的卷积核,这并不是偶然,恰恰体现了数学的美</p>
+</blockquote>
+<h1 id="尾声">
+<a class="header-anchor" href="#%e5%b0%be%e5%a3%b0"></a>
+尾声
+</h1><ul>
+<li>本文比起深度学习, 更像是纯粹在讲数学.但深度学习的确需要用到不少数学知识,所以也就合理了.笔者对数学和深度学习见解粗浅且仍在学习中,如文中存在错误,欢迎随时批评指正!</li>
 </ul>
-$${\because \sqrt{2}^2 = 2}$$<p>我们不妨先假设 $\sqrt{2}$是有理数, 即<br>
-</p>
-$$\sqrt{2} = \frac{p}{q} \qquad 其中p,\, q \in Z^+ $$<p>则    <br>
-</p>
-$$ 2 = \frac{p^2}{q^2} $$<p>此时有
-</p>
-$$ p^2 = 2q^2 $$<p>所以$ \mathbf{p^2 是偶数,\, p是偶数} $</p>
-<p>即
-</p>
-$$ p = 2k $$<p>此时
-</p>
-$$ 2 = \frac{4k^2}{q^2} \qquad 即 q^2 = 2k^2 $$<p>故$ \mathbf{q^2为偶数,\, q为偶数} $</p>
-<p>则
-</p>
-$$ \frac{p}{q} = \frac{p/2}{q/2} $$<p>以此类推, 发现p和q可以无限缩小, 但正整数无法无限缩小, 故与条件冲突, 故得证 $\sqrt{2}$为无理数.</p>
 </div>
-    <footer class="article-footer"><ul class="article-category-list"></ul>
+    <footer class="article-footer"><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
+    <a
+      class="article-category-link"
+      href="/categories/%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0"
+      data-aos="zoom-in"
+      >深度学习</a
+    >
+    </li></ul>
 <ul class="article-tag-list" itemprop="keywords"></ul>
 </footer>
   </div><nav
@@ -251,28 +339,16 @@ $$ \frac{p}{q} = \frac{p/2}{q/2} $$<p>以此类推, 发现p和q可以无限缩�
     aria-label="Article navigation"
     data-aos="fade-up"
   ><div class="article-nav-link-wrap left"><img
-            data-src="/images/tenshi/tenshi_cool1.jpg"
-            data-sizes="auto"
-            alt="Hello World"
-            class="lazyload"
-          /><a
-          href="/post/test/"
-          aria-label="前一篇:Hello World"
-          title="前一篇:Hello World"
-        ></a>
-        <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">Hello World</h3>
-      </div><div class="article-nav-link-wrap right"><img
-              data-src="/images/tenshi/tenshi_kawa1.jpg"
+              data-src="/images/tenshi/tenshi_ero1.png"
               data-sizes="auto"
               alt="[更新ing] 深度学习神经网络设计基础 1.简单的自定义神经网络"
               class="lazyload"
             /><a
           href="/post/net/net1/"
-          aria-label="后一篇:[更新ing] 深度学习神经网络设计基础 1.简单的自定义神经网络"
-          title="后一篇:[更新ing] 深度学习神经网络设计基础 1.简单的自定义神经网络"
+          aria-label="前一篇:[更新ing] 深度学习神经网络设计基础 1.简单的自定义神经网络"
+          title="前一篇:[更新ing] 深度学习神经网络设计基础 1.简单的自定义神经网络"
         ></a>
-        <div class="article-nav-caption">后一篇</div>
+        <div class="article-nav-caption">前一篇</div>
         <h3 class="article-nav-title">[更新ing] 深度学习神经网络设计基础 1.简单的自定义神经网络</h3>
       </div></nav></article></section>
         </div><footer id="footer" aria-label="Site footer">
@@ -295,10 +371,10 @@ $$ \frac{p}{q} = \frac{p/2}{q/2} $$<p>以此类推, 发现p和q可以无限缩�
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;1.3k</span
+          >&nbsp;2.4k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;00:05</span>
+        <span class="icon-coffee">&nbsp;00:07</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -324,8 +400,13 @@ $$ \frac{p}{q} = \frac{p/2}{q/2} $$<p>以此类推, 发现p和q可以无限缩�
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#前期提要">前期提要</a></li>
-    <li><a href="#证明过程">证明过程</a></li>
+    <li><a href="#1-卷积的数学定义">1. 卷积的数学定义</a></li>
+    <li><a href="#2卷积在卷积神经网络cnn中的应用">2.卷积在卷积神经网络(CNN)中的应用</a>
+      <ul>
+        <li><a href="#21-卷积核">2.1. 卷积核</a></li>
+        <li><a href="#22-各种算子图像处理">2.2. 各种算子(图像处理)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div></div>
@@ -437,9 +518,9 @@ $$ \frac{p}{q} = \frac{p/2}{q/2} $$<p>以此类推, 发现p和q可以无限缩�
   <div><script data-pjax>
         window.REIMU_POST = {
           author: "HinanawiTeriko",
-          title: "关于为什么 $\\sqrt{2}$ 是无理数",
-          url: "http:\/\/localhost:1313\/post\/prove_math1\/",
-          description: " 前期提要 笔者今日在耍手机途中恰巧看到曼士沉思录的视频, 其中提到一个证明\u0026amp;\\sqrt{2}\u0026amp;是无理数的过程, 突然意识到好像从来没有思考过为什么$\\sqrt{2}$是无理数, 故记录.\n",
+          title: "[更新ing] 深度学习神经网络设计基础 2.卷积的理解",
+          url: "http:\/\/localhost:1313\/post\/net\/net2\/",
+          description: " 正文 本文主要介绍笔者对卷积在数学上的理解以及在神经网络中的初步应用\n1. 卷积的数学定义 在数学上, 我们定义 $\\mathbf{f(x)对g(x)的卷积为f⋆g, 其定义式为}$\n连续形式 ",
           cover: "http:\/\/localhost:1313\/images\/tenshi\/tenshi_cool1_1920x1080.jpg",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
