@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HinanawiTeriko's Blog</title><link>https://hinanawiteriko.github.io/</link><description>Recent content from HinanawiTeriko's Blog</description><generator>Hugo</generator><language>zh-CN</language><managingEditor>2208794899@qq.com (HinanawiTeriko)</managingEditor><webMaster>2208794899@qq.com (HinanawiTeriko)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Tue, 23 Jun 2026 01:00:00 +0800</lastBuildDate><atom:link href="https://hinanawiteriko.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>无穷级数复习笔记</title><link>https://hinanawiteriko.github.io/post/infinite-series-notes/</link><pubDate>Tue, 23 Jun 2026 01:00:00 +0800</pubDate><author>2208794899@qq.com (HinanawiTeriko)</author><guid>https://hinanawiteriko.github.io/post/infinite-series-notes/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HinanawiTeriko's Blog</title><link>https://hinanawiteriko.github.io/</link><description>Recent content from HinanawiTeriko's Blog</description><generator>Hugo</generator><language>zh-CN</language><managingEditor>2208794899@qq.com (HinanawiTeriko)</managingEditor><webMaster>2208794899@qq.com (HinanawiTeriko)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Fri, 18 Sep 2026 14:30:00 +0800</lastBuildDate><atom:link href="https://hinanawiteriko.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>[不想更新]archlinux折腾记录和疑难杂症解决</title><link>https://hinanawiteriko.github.io/post/archlinux/arch-tech-notes-1/</link><pubDate>Fri, 18 Sep 2026 14:30:00 +0800</pubDate><author>2208794899@qq.com (HinanawiTeriko)</author><guid>https://hinanawiteriko.github.io/post/archlinux/arch-tech-notes-1/</guid><description>
+<![CDATA[<h1>[不想更新]archlinux折腾记录和疑难杂症解决</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
+        
+          <h1 id="引言">
+<a class="header-anchor" href="#%e5%bc%95%e8%a8%80"></a>
+引言
+</h1><blockquote>
+<p>折腾arch就是舒服呀，感觉左胸口那颗肿瘤都不跳了</p>
+<p>感谢<a href="https://decimo.top/">decimo</a>和<a href="https://blog.btop251.top/">晓堃</a>这两个b害我误入arch深坑</p>
+<p>配置参考：</p>
+<ul>
+<li>ThinkPad x13 yoga gen2</li>
+<li>archlinux+niri（Wayland)</li>
+</ul>
+</blockquote>
+<h1 id="正文">
+<a class="header-anchor" href="#%e6%ad%a3%e6%96%87"></a>
+正文
+</h1><blockquote>
+<p>安装arch、配置窗口管理器的部分我忘记记录了，就不讲了。这里随缘说说arch使用过程中遇到的一些坑和解决方法</p>
+        
+        <hr><p>本文2026-09-18首发于<a href='https://hinanawiteriko.github.io/'>HinanawiTeriko's Blog</a>，最后修改于2026-09-18</p>]]></description><category>杂谈</category><category>技术</category></item><item><title>无穷级数复习笔记</title><link>https://hinanawiteriko.github.io/post/infinite-series-notes/</link><pubDate>Tue, 23 Jun 2026 01:00:00 +0800</pubDate><author>2208794899@qq.com (HinanawiTeriko)</author><guid>https://hinanawiteriko.github.io/post/infinite-series-notes/</guid><description>
 <![CDATA[<h1>无穷级数复习笔记</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
         
           <h2 id="一常见函数的泰勒展开式及其衍生">
