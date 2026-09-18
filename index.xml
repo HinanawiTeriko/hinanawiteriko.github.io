@@ -113,8 +113,8 @@
 起因
 </h2><p>我的 Hugo 博客使用 Reimu 主题的 APlayer + MetingJS 组件来展示歌单。默认情况下，MetingJS 调用公共 Meting API 解析网易云音乐链接，生成的播放器只能播放 30 秒试听片段——即使是自己上传的歌曲或已购买的专辑。</p>
         
-        <hr><p>本文2026-06-22首发于<a href='https://hinanawiteriko.github.io/'>HinanawiTeriko's Blog</a>，最后修改于2026-06-22</p>]]></description><category>杂谈</category></item><item><title>[更新中] 深度学习神经网络设计基础 2.卷积的理解</title><link>https://hinanawiteriko.github.io/post/net/net2/</link><pubDate>Sat, 28 Feb 2026 01:10:47 +0800</pubDate><author>2208794899@qq.com (HinanawiTeriko)</author><guid>https://hinanawiteriko.github.io/post/net/net2/</guid><description>
-<![CDATA[<h1>[更新中] 深度学习神经网络设计基础 2.卷积的理解</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
+        <hr><p>本文2026-06-22首发于<a href='https://hinanawiteriko.github.io/'>HinanawiTeriko's Blog</a>，最后修改于2026-06-22</p>]]></description><category>杂谈</category></item><item><title>[弃坑ing] 深度学习神经网络设计基础 2.卷积的理解</title><link>https://hinanawiteriko.github.io/post/net/net2/</link><pubDate>Sat, 28 Feb 2026 01:10:47 +0800</pubDate><author>2208794899@qq.com (HinanawiTeriko)</author><guid>https://hinanawiteriko.github.io/post/net/net2/</guid><description>
+<![CDATA[<h1>[弃坑ing] 深度学习神经网络设计基础 2.卷积的理解</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
         
           <h1 id="正文">
 <a class="header-anchor" href="#%e6%ad%a3%e6%96%87"></a>
@@ -127,8 +127,8 @@
 1. 卷积的数学定义
 </h2><p>在数学上，我们定义函数 $f$ 对 $g$ 的卷积为 $f \star g$，其定义式为：</p>
         
-        <hr><p>本文2026-02-28首发于<a href='https://hinanawiteriko.github.io/'>HinanawiTeriko's Blog</a>，最后修改于2026-02-28</p>]]></description><category>深度学习</category></item><item><title>[更新ing] 深度学习神经网络设计基础 1.简单的自定义神经网络</title><link>https://hinanawiteriko.github.io/post/net/net1/</link><pubDate>Sun, 22 Feb 2026 21:50:47 +0800</pubDate><author>2208794899@qq.com (HinanawiTeriko)</author><guid>https://hinanawiteriko.github.io/post/net/net1/</guid><description>
-<![CDATA[<h1>[更新ing] 深度学习神经网络设计基础 1.简单的自定义神经网络</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
+        <hr><p>本文2026-02-28首发于<a href='https://hinanawiteriko.github.io/'>HinanawiTeriko's Blog</a>，最后修改于2026-02-28</p>]]></description><category>深度学习</category></item><item><title>[弃坑ing] 深度学习神经网络设计基础 1.简单的自定义神经网络</title><link>https://hinanawiteriko.github.io/post/net/net1/</link><pubDate>Sun, 22 Feb 2026 21:50:47 +0800</pubDate><author>2208794899@qq.com (HinanawiTeriko)</author><guid>https://hinanawiteriko.github.io/post/net/net1/</guid><description>
+<![CDATA[<h1>[弃坑ing] 深度学习神经网络设计基础 1.简单的自定义神经网络</h1><p>作者：HinanawiTeriko（2208794899@qq.com）</p>
         
           <h1 id="引言">
 <a class="header-anchor" href="#%e5%bc%95%e8%a8%80"></a>
